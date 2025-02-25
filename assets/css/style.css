@@ -3,7 +3,11 @@
 }
 
 .logo-text {
-    color:#ffa600;
+    color: #ffa600;
+}
+
+.navbar-brand:hover {
+    color: #ffa600;
 }
 
 .logo-img {
@@ -13,4 +17,8 @@
 
 .copyrights-text {
     font-size: 0.7rem;
+}
+
+.item-background {
+    background-color: #0fa7f2;
 }
