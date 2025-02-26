@@ -1,11 +1,57 @@
 [
-{"type":"header","version":"5.2.2","comment":"Export to JSON plugin for PHPMyAdmin"},
-{"type":"database","name":"ocasse"},
-{"type":"table","name":"avis","database":"ocasse","data":
-[
-{"u_id":"1","avis_id":"4","avis_note":"3","avis_texte":"Satisfait de mon achat.","avis_date":"2025-02-25","prod_id":"11","u_nom":"mat","u_mail":"mat@gmail.com","u_tel":"0615995501","u_mdp":"sdfghj","u_adresse":"3 rue du jardin 76000 le Havre"},
-{"u_id":"2","avis_id":"8","avis_note":"5","avis_texte":"Très bon service client.","avis_date":"2025-02-25","prod_id":"11","u_nom":"joe","u_mail":"joe@gmail.com","u_tel":"0702050423","u_mdp":"cvbnjk","u_adresse":"5 rue du pont 76200 Harfleur"},
-{"u_id":"3","avis_id":"11","avis_note":"4","avis_texte":"Bonne qualité, satisfait.","avis_date":"2025-02-25","prod_id":"11","u_nom":"sophie","u_mail":"sophie@gmail.com","u_tel":"0145786915","u_mdp":"dgetsr","u_adresse":"45 rue de la vallée 76150 Rouelle"}
-]
-}
+    {
+        "type": "header",
+        "version": "5.2.2",
+        "comment": "Export to JSON plugin for PHPMyAdmin"
+    },
+    {
+        "type": "database",
+        "name": "ocasse"
+    },
+    {
+        "type": "table",
+        "name": "avis",
+        "database": "ocasse",
+        "data": [
+            {
+                "u_id": "1",
+                "avis_id": "4",
+                "avis_note": "3",
+                "avis_texte": "Satisfait de mon achat.",
+                "avis_date": "2025-02-25",
+                "prod_id": "11",
+                "u_nom": "mat",
+                "u_mail": "mat@gmail.com",
+                "u_tel": "0615995501",
+                "u_mdp": "sdfghj",
+                "u_adresse": "3 rue du jardin 76000 le Havre"
+            },
+            {
+                "u_id": "2",
+                "avis_id": "8",
+                "avis_note": "5",
+                "avis_texte": "Très bon service client.",
+                "avis_date": "2025-02-25",
+                "prod_id": "11",
+                "u_nom": "joe",
+                "u_mail": "joe@gmail.com",
+                "u_tel": "0702050423",
+                "u_mdp": "cvbnjk",
+                "u_adresse": "5 rue du pont 76200 Harfleur"
+            },
+            {
+                "u_id": "3",
+                "avis_id": "11",
+                "avis_note": "4",
+                "avis_texte": "Bonne qualité, satisfait.",
+                "avis_date": "2025-02-25",
+                "prod_id": "11",
+                "u_nom": "sophie",
+                "u_mail": "sophie@gmail.com",
+                "u_tel": "0145786915",
+                "u_mdp": "dgetsr",
+                "u_adresse": "45 rue de la vallée 76150 Rouelle"
+            }
+        ]
+    }
 ]
