@@ -1,0 +1,9 @@
+[
+{"type":"header","version":"5.2.2","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"ocasse"},
+{"type":"table","name":"commandes","database":"ocasse","data":
+[
+{"com_id":"1","com_date":"2025-02-25","u_id":"1"}
+]
+}
+]

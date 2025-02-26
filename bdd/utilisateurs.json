@@ -1,0 +1,9 @@
+[
+{"type":"header","version":"5.2.2","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"ocasse"},
+{"type":"table","name":"utilisateurs","database":"ocasse","data":
+[
+{"u_id":"1","u_nom":"mat","u_mail":"mat@gmail.com","u_tel":"0615995501","u_mdp":"sdfghj","u_adresse":"3 rue du jardin 76000 le Havre"}
+]
+}
+]

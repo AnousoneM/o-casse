@@ -1,0 +1,20 @@
+[
+{"type":"header","version":"5.2.2","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"ocasse"},
+{"type":"table","name":"produits","database":"ocasse","data":
+[
+{"prod_id":"1","prod_nom":"Moteur Diesel 1.6L","prod_desc":"Moteur occasion en bon état, 120 000 km","prod_prix":"1200","prod_ref":"MECA001","prod_qte":"2","prod_img":"moteur_diesel.jpg","cat_nom":"Mécanique"},
+{"prod_id":"2","prod_nom":"Boîte de vitesses manuelle","prod_desc":"Boîte 6 rapports pour véhicule utilitaire","prod_prix":"700","prod_ref":"MECA002","prod_qte":"1","prod_img":"boite_vitesse.jpg","cat_nom":"Mécanique"},
+{"prod_id":"3","prod_nom":"Alternateur 90A","prod_desc":"Alternateur pour véhicule essence 1.2L","prod_prix":"150","prod_ref":"MECA003","prod_qte":"3","prod_img":"alternateur.jpg","cat_nom":"Mécanique"},
+{"prod_id":"4","prod_nom":"Démarreur 12V","prod_desc":"Démarreur compatible avec plusieurs modèles","prod_prix":"180","prod_ref":"MECA004","prod_qte":"2","prod_img":"demarreur.jpg","cat_nom":"Mécanique"},
+{"prod_id":"5","prod_nom":"Capot avant","prod_desc":"Capot en bon état, couleur noire","prod_prix":"250","prod_ref":"CARRO001","prod_qte":"2","prod_img":"capot_noir.jpg","cat_nom":"Carrosserie"},
+{"prod_id":"6","prod_nom":"Aile avant gauche","prod_desc":"Aile avant gauche pour berline, couleur blanche","prod_prix":"180","prod_ref":"CARRO002","prod_qte":"1","prod_img":"aile_gauche.jpg","cat_nom":"Carrosserie"},
+{"prod_id":"7","prod_nom":"Pare-chocs arrière","prod_desc":"Pare-chocs arrière avec capteurs de recul","prod_prix":"300","prod_ref":"CARRO003","prod_qte":"1","prod_img":"parechocs_arriere.jpg","cat_nom":"Carrosserie"},
+{"prod_id":"11","prod_nom":"Siège conducteur","prod_desc":"Siège en cuir noir, bon état","prod_prix":"400","prod_ref":"INTER001","prod_qte":"1","prod_img":"siege_cuir.jpg","cat_nom":"Intérieur"},
+{"prod_id":"12","prod_nom":"Tableau de bord","prod_desc":"Tableau de bord avec affichage numérique","prod_prix":"350","prod_ref":"INTER002","prod_qte":"1","prod_img":"tableau_bord.jpg","cat_nom":"Intérieur"},
+{"prod_id":"8","prod_nom":"Phare avant gauche","prod_desc":"Phare LED pour véhicule moderne","prod_prix":"200","prod_ref":"ECLAIR001","prod_qte":"2","prod_img":"phare_av_gauche.jpg","cat_nom":"Eclairage"},
+{"prod_id":"9","prod_nom":"Feu arrière droit","prod_desc":"Feu arrière avec clignotants LED","prod_prix":"150","prod_ref":"ECLAIR002","prod_qte":"2","prod_img":"feu_ar_droit.jpg","cat_nom":"Eclairage"},
+{"prod_id":"10","prod_nom":"Antibrouillard avant","prod_desc":"Paire de phares antibrouillard universels","prod_prix":"100","prod_ref":"ECLAIR003","prod_qte":"1","prod_img":"antibrouillard.jpg","cat_nom":"Eclairage"}
+]
+}
+]
