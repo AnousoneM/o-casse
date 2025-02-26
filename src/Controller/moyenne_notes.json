@@ -1,0 +1,9 @@
+[
+{"type":"header","version":"5.2.2","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"ocasse"},
+{"type":"table","name":"avis","database":"ocasse","data":
+[
+{"prod_id":"11","note_moyenne":"4.0"}
+]
+}
+]
