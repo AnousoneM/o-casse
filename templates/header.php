@@ -33,7 +33,7 @@ $categories = json_decode($catJson, true)[2]['data'];
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
+                            <a class="nav-link" aria-current="page" href="index.php">Accueil</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="#">Qui sommes-nous ?</a>
@@ -55,7 +55,7 @@ $categories = json_decode($catJson, true)[2]['data'];
                         <input class="form-control me-2" type="search" placeholder="Phare, pare-choc ..." aria-label="Search">
                         <button class="btn btn-dark" type="submit" disabled>Rechercher</button>
                     </form>
-                    <button class="mx-3 btn btn-outline-dark"><i class="bi bi-person-fill me-2"></i>Mat</button>
+                    <a class="mx-3 btn btn-outline-dark" href="profil.php"><i class="bi bi-person-fill me-2"></i>Mat</a>
                 </div>
             </div>
         </nav>

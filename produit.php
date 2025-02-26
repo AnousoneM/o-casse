@@ -16,32 +16,27 @@ function createStars($moyenne): void
 }
 
 
-// on récupère le json via file_get_contents
+// on récupère le json via file_get_contents pour le détail d'un produit
 $prodJson = file_get_contents('src/Controller/details_produit.json');
-// on le transforme en array via json_decode : nous ciblons directement le tableau avec "[2]['data']"
+// on le transforme en array via json_decode : nous ciblons directement le tableau avec "[2]['data'][0]"
 $detailsProd = json_decode($prodJson, true)[2]['data'][0];
 
-
-// on récupère le json via file_get_contents
+// on récupère le json via file_get_contents pour la moyenne des notes
 $moyenneJson = file_get_contents('src/Controller/moyenne_notes.json');
-// on le transforme en array via json_decode : nous ciblons directement le tableau avec "[2]['data']"
+// on le transforme en array via json_decode : nous ciblons directement le tableau avec "[2]['data'][0]"
 $moyenneNotes = json_decode($moyenneJson, true)[2]['data'][0];
 
-
-
-// on récupère le json via file_get_contents
+// on récupère le json via file_get_contents pour tous les avis
 $avisJson = file_get_contents('src/Controller/avis_un_produits.json');
 // on le transforme en array via json_decode : nous ciblons directement le tableau avec "[2]['data']"
 $avis = json_decode($avisJson, true)[2]['data'];
 
-
-
 ?>
 
-<div class="container bg-light rounded pt-5 my-5">
-    <div class="row p-5 border border-danger rounded">
+<div class="container bg-light rounded pt-5 pb-3 my-5">
+    <div class="row p-5 rounded">
         <div class="col"><img src="assets/img/produits/siege_cuir.jpg" alt=""></div>
-        <div class="col border border-primary p-3">
+        <div class="col p-3">
             <p class="mb-1">Réf : <?= $detailsProd["prod_ref"] ?></p>
             <p>Stock : <b><?= $detailsProd["prod_qte"] ?></b></p>
             <span class="badge mb-2 rounded-pill text-bg-success"><?= $detailsProd["cat_nom"] ?></span>
@@ -57,7 +52,7 @@ $avis = json_decode($avisJson, true)[2]['data'];
 
 <!-- Modal des avis-->
 <div class="modal fade" id="avisModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="ModalLabel">Les avis du produit</h1>
@@ -65,15 +60,12 @@ $avis = json_decode($avisJson, true)[2]['data'];
             </div>
             <div class="modal-body">
 
-
-                <?php
-                foreach ($avis as $value) { ?>
-
+                <?php foreach ($avis as $value) { ?>
 
                     <div class="row mb-2 py-2 border-bottom">
                         <div class="col">
                             <p><?= $value["u_nom"] ?></p>
-                            <p><?= $value["avis_date"] ?></p>
+                            <p><?= date_format(date_create($value["avis_date"]), 'd/m/Y') ?></p>
                             <?php createStars($value["avis_note"]) ?>
                         </div>
                         <div class="col border-start">
@@ -81,19 +73,7 @@ $avis = json_decode($avisJson, true)[2]['data'];
                         </div>
                     </div>
 
-
-
-                <?php }
-
-                ?>
-
-
-
-
-
-
-
-                
+                <?php } ?>
 
             </div>
             <div class="modal-footer border-0">

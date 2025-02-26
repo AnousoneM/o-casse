@@ -20,7 +20,7 @@
 }
 
 .item-background {
-    background-color: #39abe3;
+    background-color: #9ad3ef;
 }
 
 .footer {
@@ -31,4 +31,9 @@
     object-fit: contain;
     height: 30vh;
     width: auto;
+}
+
+.portrait-img {
+    width: 15vw;
+    height: auto;
 }
