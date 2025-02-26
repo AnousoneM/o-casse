@@ -1,3 +1,10 @@
+<?php
+// on recupère toutes les catégories au format json puis on les transforme en array via json_decode
+$catJson = file_get_contents('src/Controller/toutes_categories.json');
+$categories = json_decode($catJson, true)[2]['data'];
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -36,11 +43,11 @@
                                 Catégories
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Mécanique</a></li>
-                                <li><a class="dropdown-item" href="#">Carosserie</a></li>
-                                <li><a class="dropdown-item" href="#">Intérieur</a></li>
-                                <li><a class="dropdown-item" href="#">Eclairage</a></li>
-                                <li><a class="dropdown-item" href="#">Pneumatique</a></li>
+
+                                <?php foreach ($categories as $cat) { ?>
+                                    <li><a class="dropdown-item" href="#"><?= $cat['cat_nom'] ?></a></li>
+                                <?php } ?>
+
                             </ul>
                         </li>
                     </ul>

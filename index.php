@@ -6,15 +6,6 @@
     <div class="col-lg-6 mx-auto">
         <p class="lead mb-4">O-casse, spécialiste des pièces auto d’occasion, propose aux particuliers des pièces détachées en très bon état, garanties et à prix imbattables. Économiques et écologiques, nos pièces vous permettent de prolonger la vie de votre voiture sans vous ruiner. Roulez malin, réparez au lieu de jeter </p>
     </div>
-
-    <?php
-    // on recupère toutes les catégories au format json puis on les transforme en array via json_decode
-    $catJson = file_get_contents('src/Controller/toutes_categories.json');
-    $categories = json_decode($catJson, true)[2]['data'];
-
-    var_dump($categories);
-    ?>
-
 </div>
 
 <div class="px-4 pb-1 my-5 text-center">
