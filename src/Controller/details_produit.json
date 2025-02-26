@@ -1,0 +1,28 @@
+[
+    {
+        "type": "header",
+        "version": "5.2.2",
+        "comment": "Export to JSON plugin for PHPMyAdmin"
+    },
+    {
+        "type": "database",
+        "name": "ocasse"
+    },
+    {
+        "type": "table",
+        "name": "produits",
+        "database": "ocasse",
+        "data": [
+            {
+                "prod_id": "11",
+                "prod_nom": "Siège conducteur",
+                "prod_desc": "Siège en cuir noir, bon état",
+                "prod_prix": "400",
+                "prod_ref": "INTER001",
+                "prod_qte": "1",
+                "prod_img": "siege_cuir.jpg",
+                "cat_nom": "Intérieur"
+            }
+        ]
+    }
+]

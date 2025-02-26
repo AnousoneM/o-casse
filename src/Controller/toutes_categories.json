@@ -1,0 +1,38 @@
+[
+    {
+        "type": "header",
+        "version": "5.2.2",
+        "comment": "Export to JSON plugin for PHPMyAdmin"
+    },
+    {
+        "type": "database",
+        "name": "ocasse"
+    },
+    {
+        "type": "table",
+        "name": "categories",
+        "database": "ocasse",
+        "data": [
+            {
+                "cat_id": "1",
+                "cat_nom": "Mécanique"
+            },
+            {
+                "cat_id": "2",
+                "cat_nom": "Carrosserie"
+            },
+            {
+                "cat_id": "3",
+                "cat_nom": "Intérieur"
+            },
+            {
+                "cat_id": "4",
+                "cat_nom": "Eclairage"
+            },
+            {
+                "cat_id": "5",
+                "cat_nom": "Pneumatique"
+            }
+        ]
+    }
+]
