@@ -15,19 +15,40 @@ function createStars($moyenne): void
     }
 }
 
+
+// on récupère le json via file_get_contents
+$prodJson = file_get_contents('src/Controller/details_produit.json');
+// on le transforme en array via json_decode : nous ciblons directement le tableau avec "[2]['data']"
+$detailsProd = json_decode($prodJson, true)[2]['data'][0];
+
+
+// on récupère le json via file_get_contents
+$moyenneJson = file_get_contents('src/Controller/moyenne_notes.json');
+// on le transforme en array via json_decode : nous ciblons directement le tableau avec "[2]['data']"
+$moyenneNotes = json_decode($moyenneJson, true)[2]['data'][0];
+
+
+
+// on récupère le json via file_get_contents
+$avisJson = file_get_contents('src/Controller/avis_un_produits.json');
+// on le transforme en array via json_decode : nous ciblons directement le tableau avec "[2]['data']"
+$avis = json_decode($avisJson, true)[2]['data'];
+
+
+
 ?>
 
 <div class="container bg-light rounded pt-5 my-5">
     <div class="row p-5 border border-danger rounded">
         <div class="col"><img src="assets/img/produits/siege_cuir.jpg" alt=""></div>
         <div class="col border border-primary p-3">
-            <p class="mb-1">Réf : 502325</p>
-            <p>Stock : <b>1</b></p>
-            <span class="badge mb-2 rounded-pill text-bg-success">Intérieur</span>
-            <p class="fs-3 fw-bold">50€</p>
-            <h1>SIEGE CUIR</h1>
-            <p>Avis <?php createStars(2) ?> : (<a class="mx-1" data-bs-toggle="modal" data-bs-target="#avisModal" href="#">4</a>) </p>
-            <p>Super fauteuil de voiture, en noir, en full cuir</p>
+            <p class="mb-1">Réf : <?= $detailsProd["prod_ref"] ?></p>
+            <p>Stock : <b><?= $detailsProd["prod_qte"] ?></b></p>
+            <span class="badge mb-2 rounded-pill text-bg-success"><?= $detailsProd["cat_nom"] ?></span>
+            <p class="fs-3 fw-bold"><?= $detailsProd["prod_prix"] ?>€</p>
+            <h1><?= $detailsProd["prod_nom"] ?></h1>
+            <p>Avis <?php createStars($moyenneNotes["note_moyenne"]) ?> : (<a class="mx-1" data-bs-toggle="modal" data-bs-target="#avisModal" href="#"><?= count($avis) ?></a>) </p>
+            <p><?= $detailsProd["prod_desc"] ?></p>
             <button type="button" class="btn btn-dark">Réserver</button>
         </div>
     </div>
@@ -44,27 +65,35 @@ function createStars($moyenne): void
             </div>
             <div class="modal-body">
 
-                <div class="row mb-2 py-2 border-bottom">
-                    <div class="col">
-                        <p>Mat</p>
-                        <p>25/02/2025</p>
-                        <?php createStars(2) ?>
-                    </div>
-                    <div class="col border-start">
-                        <i>"Trop bien je kiffe !!!"</i>
-                    </div>
-                </div>
 
-                <div class="row mb-2 py-2 border-bottom">
-                    <div class="col">
-                        <p>Mat</p>
-                        <p>25/02/2025</p>
-                        <?php createStars(2) ?>
+                <?php
+                foreach ($avis as $value) { ?>
+
+
+                    <div class="row mb-2 py-2 border-bottom">
+                        <div class="col">
+                            <p><?= $value["u_nom"] ?></p>
+                            <p><?= $value["avis_date"] ?></p>
+                            <?php createStars($value["avis_note"]) ?>
+                        </div>
+                        <div class="col border-start">
+                            <i>"<?= $value["avis_texte"] ?>"</i>
+                        </div>
                     </div>
-                    <div class="col border-start">
-                        <i>"Trop bien je kiffe !!!"</i>
-                    </div>
-                </div>
+
+
+
+                <?php }
+
+                ?>
+
+
+
+
+
+
+
+                
 
             </div>
             <div class="modal-footer border-0">
