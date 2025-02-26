@@ -7,20 +7,8 @@ $prodJson = file_get_contents('src/Controller/produits.json');
 
 // on le transforme en array via json_decode : nous ciblons directement le tableau avec "[2]['data']"
 $produits = json_decode($prodJson, true)[2]['data'];
-print_r($produits);
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
 
 <div class="px-4 pt-5 pb-3 my-5 text-center bg-white">
     <img src="assets/img/ocasse-logo.svg" alt="logo o-casse">
@@ -39,8 +27,6 @@ print_r($produits);
 
 <div class="row row-cols-lg-4 g-3 mx-5 mb-5">
 
-
-
     <?php foreach ($produits as $value) { ?>
 
         <div class="col">
@@ -54,16 +40,7 @@ print_r($produits);
             </a>
         </div>
 
-
-
-
     <?php } ?>
-
-
-
-
-
- 
 
 </div>
 
