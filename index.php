@@ -1,5 +1,27 @@
 <?php include 'templates/header.php' ?>
 
+<?php
+
+// on récupère le json via file_get_contents
+$prodJson = file_get_contents('src/Controller/produits.json');
+
+// on le transforme en array via json_decode : nous ciblons directement le tableau avec "[2]['data']"
+$produits = json_decode($prodJson, true)[2]['data'];
+print_r($produits);
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="px-4 pt-5 pb-3 my-5 text-center bg-white">
     <img src="assets/img/ocasse-logo.svg" alt="logo o-casse">
     <h1 class="display-4 fw-bold logo-text">O-casse</h1>
@@ -17,52 +39,31 @@
 
 <div class="row row-cols-lg-4 g-3 mx-5 mb-5">
 
-    <div class="col">
-        <a href="#" class="text-decoration-none text-dark">
-            <div class="p-3 item-background shadow border-light">
-                <span class="badge rounded-pill text-bg-primary">Pneumatique</span>
-                <img src="https://s1.medias-norauto.fr/images_produits/tyre_comm_txt-michelin_primacy_4_plus-1/400x400/pneu-michelin-primacy-4-205-55-r16-91-v--2433281.jpg" class="d-block mx-auto img-fluid border rounded my-3" alt="img-carotte">
-                <p class="text-start">Pneu pas cher</p>
-                <b>18€</b>
-            </div>
-        </a>
-    </div>
 
-    <div class="col">
-        <div class="p-3 item-background shadow border-light">
-            <span class="badge rounded-pill text-bg-primary">Pneumatique</span>
-            <img src="https://s1.medias-norauto.fr/images_produits/tyre_comm_txt-michelin_primacy_4_plus-1/400x400/pneu-michelin-primacy-4-205-55-r16-91-v--2433281.jpg" class="d-block mx-auto img-fluid border my-3" alt="img-carotte">
-            <p class="text-start">Pneu pas cher</p>
-            <b>18€</b>
-        </div>
-    </div>
 
-    <div class="col">
-        <div class="p-3 item-background shadow border-light">
-            <span class="badge rounded-pill text-bg-primary">Pneumatique</span>
-            <img src="https://s1.medias-norauto.fr/images_produits/tyre_comm_txt-michelin_primacy_4_plus-1/400x400/pneu-michelin-primacy-4-205-55-r16-91-v--2433281.jpg" class="d-block mx-auto img-fluid border my-3" alt="img-carotte">
-            <p class="text-start">Pneu pas cher</p>
-            <b>18€</b>
-        </div>
-    </div>
+    <?php foreach ($produits as $value) { ?>
 
-    <div class="col">
-        <div class="p-3 item-background shadow border-light">
-            <span class="badge rounded-pill text-bg-primary">Pneumatique</span>
-            <img src="https://s1.medias-norauto.fr/images_produits/tyre_comm_txt-michelin_primacy_4_plus-1/400x400/pneu-michelin-primacy-4-205-55-r16-91-v--2433281.jpg" class="d-block mx-auto img-fluid border my-3" alt="img-carotte">
-            <p class="text-start">Pneu pas cher</p>
-            <b>18€</b>
+        <div class="col">
+            <a href="#" class="text-decoration-none text-dark">
+                <div class="p-3 item-background shadow border-light">
+                    <span class="badge rounded-pill text-bg-primary"><?= $value["cat_nom"] ?></span>
+                    <img src="assets/img/produits/<?= $value["prod_img"] ?>" class="d-block mx-auto img-fluid border rounded my-3" alt="img-carotte">
+                    <p class="text-start"><?= $value["prod_nom"] ?></p>
+                    <b><?=$value["prod_prix"]?>€</b>
+                </div>
+            </a>
         </div>
-    </div>
 
-    <div class="col">
-        <div class="p-3 item-background shadow border-light">
-            <span class="badge rounded-pill text-bg-primary">Pneumatique</span>
-            <img src="https://s1.medias-norauto.fr/images_produits/tyre_comm_txt-michelin_primacy_4_plus-1/400x400/pneu-michelin-primacy-4-205-55-r16-91-v--2433281.jpg" class="d-block mx-auto img-fluid border my-3" alt="img-carotte">
-            <p class="text-start">Pneu pas cher</p>
-            <b>18€</b>
-        </div>
-    </div>
+
+
+
+    <?php } ?>
+
+
+
+
+
+ 
 
 </div>
 
