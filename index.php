@@ -7,6 +7,17 @@ $prodJson = file_get_contents('src/Controller/produits.json');
 
 // on le transforme en array via json_decode : nous ciblons directement le tableau avec "[2]['data']"
 $produits = json_decode($prodJson, true)[2]['data'];
+// on mélange les produits
+shuffle($produits);
+
+// création d'un tableau associatif pour la mise en place des catégories
+$pills = [
+    'Mécanique' => 'primary',
+    'Carrosserie' => 'secondary',
+    'Intérieur' => 'success',
+    'Eclairage' => 'info',
+    'Pneumatique' => 'dark',
+]
 
 ?>
 
@@ -30,12 +41,12 @@ $produits = json_decode($prodJson, true)[2]['data'];
     <?php foreach ($produits as $value) { ?>
 
         <div class="col">
-            <a href="#" class="text-decoration-none text-dark">
+            <a href="<?= $value["prod_id"] == 11? 'produit.php' : '#' ?>" class="text-decoration-none text-dark">
                 <div class="p-3 item-background shadow border-light">
-                    <span class="badge rounded-pill text-bg-primary"><?= $value["cat_nom"] ?></span>
+                    <span class="badge rounded-pill text-bg-<?= $pills[$value["cat_nom"]] ?>"><?= $value["cat_nom"] ?></span>
                     <img src="assets/img/produits/<?= $value["prod_img"] ?>" class="d-block mx-auto img-fluid border rounded my-3" alt="img-carotte">
                     <p class="text-start"><?= $value["prod_nom"] ?></p>
-                    <b><?=$value["prod_prix"]?>€</b>
+                    <b><?= $value["prod_prix"] ?>€</b>
                 </div>
             </a>
         </div>
