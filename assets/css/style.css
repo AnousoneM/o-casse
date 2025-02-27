@@ -27,10 +27,10 @@
     height: 25vh;
 }
 
-.produit-img {
-    object-fit: contain;
+.img-produit {
     height: 30vh;
-    width: auto;
+    width: 100%;
+    object-fit: contain;
 }
 
 .portrait-img {

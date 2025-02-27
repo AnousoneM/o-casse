@@ -38,13 +38,18 @@ $pills = [
 
 <div class="row row-cols-lg-4 g-4 mx-5 mb-5">
 
+    <!-- Boucle permettant d'afficher tous les produits -->
     <?php foreach ($produits as $value) { ?>
 
         <div class="col">
-            <a href="<?= $value["prod_id"] == 11? 'produit.php' : '#' ?>" class="text-decoration-none text-dark">
-                <div class="py-3 px-2 bg-light shadow border-light">
-                    <span class="badge rounded-pill text-bg-<?= $pills[$value["cat_nom"]] ?>"><?= $value["cat_nom"] ?></span>
-                    <img src="assets/img/produits/<?= $value["prod_img"] ?>" class="d-block mx-auto produit-img border rounded my-3" alt="img-carotte">
+            <a href="<?= $value["prod_id"] == 11 ? 'produit.php' : '#' ?>" class="text-decoration-none text-dark">
+                <div class="p-4 bg-light shadow border-light">
+                    <span class="badge p-2 text-bg-<?= $pills[$value["cat_nom"]] ?>"><?= $value["cat_nom"] ?></span>
+
+                    <div class="border border-subtle-secondary my-3 p-2 text-center">
+                        <img src="assets/img/produits/<?= $value["prod_img"] ?>" class="img-produit" alt="image de <?= $value["prod_nom"] ?>">
+                    </div>
+
                     <p class="text-start"><?= $value["prod_nom"] ?></p>
                     <b><?= $value["prod_prix"] ?>€</b>
                 </div>
