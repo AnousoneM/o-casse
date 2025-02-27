@@ -21,10 +21,12 @@ $prodJson = file_get_contents('src/Controller/details_produit.json');
 // on le transforme en array via json_decode : nous ciblons directement le tableau avec "[2]['data'][0]"
 $detailsProd = json_decode($prodJson, true)[2]['data'][0];
 
-// on récupère le json via file_get_contents pour la moyenne des notes
+
+// on récupère le json via file_get_contents pour la moyenne des notes des avis
 $moyenneJson = file_get_contents('src/Controller/moyenne_notes.json');
 // on le transforme en array via json_decode : nous ciblons directement le tableau avec "[2]['data'][0]"
 $moyenneNotes = json_decode($moyenneJson, true)[2]['data'][0];
+
 
 // on récupère le json via file_get_contents pour tous les avis
 $avisJson = file_get_contents('src/Controller/avis_un_produits.json');
