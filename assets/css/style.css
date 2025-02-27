@@ -20,15 +20,20 @@
 }
 
 .item-background {
-    background-color: #39abe3;
+    background-color: #9ad3ef;
 }
 
 .footer {
     height: 25vh;
 }
 
-.produit-img {
-    object-fit: contain;
+.img-produit {
     height: 30vh;
-    width: auto;
+    width: 100%;
+    object-fit: contain;
+}
+
+.portrait-img {
+    width: 15vw;
+    height: auto;
 }
