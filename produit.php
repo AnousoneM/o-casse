@@ -46,11 +46,27 @@ $avis = json_decode($avisJson, true)[2]['data'];
             <h1><?= $detailsProd["prod_nom"] ?></h1>
             <p>Avis <?php createStars($moyenneNotes["note_moyenne"]) ?> : (<a class="mx-1" data-bs-toggle="modal" data-bs-target="#avisModal" href="#"><?= count($avis) ?></a>) </p>
             <p><?= $detailsProd["prod_desc"] ?></p>
-            <button type="button" class="btn btn-dark">Réserver</button>
+            <button type="button" class="btn btn-dark" id="liveToastBtn">Réserver</button>
         </div>
     </div>
     <a class="btn btn-secondary text-center col-4 d-block mx-auto m-2" href="index.php">Retour</a>
 </div>
+
+<!-- toast pour la réservation du produit -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <img src="..." class="rounded me-2" alt="...">
+            <strong class="me-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Hello, world! This is a toast message.
+        </div>
+    </div>
+</div>
+
 
 <!-- Modal des avis-->
 <div class="modal fade" id="avisModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">

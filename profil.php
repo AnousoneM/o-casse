@@ -34,6 +34,7 @@ $commandes = json_decode($commandeJson, true)[2]['data'];
                         <th scope="col">#</th>
                         <th scope="col">Numéro de la commande</th>
                         <th scope="col">Date de la commande</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,10 +43,11 @@ $commandes = json_decode($commandeJson, true)[2]['data'];
                     <?php
                     $count = 1;
                     foreach ($commandes as $value) { ?>
-                        <tr onclick="location.href='commandes.php'">
+                        <tr>
                             <th scope="row"><?= $count++ ?></th>
                             <td><?= $value['com_id'] ?></td>
                             <td><?= date_format(date_create($value['com_date']), 'd/m/Y') ?></td>
+                            <td><a class="text-dark" href="commandes.php"><i class="bi bi-file-earmark-text-fill"></i></a></td>
                         </tr>
                     <?php } ?>
 
