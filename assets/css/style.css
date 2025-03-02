@@ -6,6 +6,20 @@
     color: #ffa600;
 }
 
+.inter-div-1 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 55vh;
+    background-image: url(../img/piece-meca.jpg);
+}
+
+.inter-div-2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 55vh;
+    background-image: url(../img/mecano.jpg);
+}
+
 .navbar-brand:hover {
     color: #ffa600;
 }

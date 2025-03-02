@@ -20,7 +20,7 @@ $commandes = json_decode($commandeJson, true)[2]['data'];
     <div class="row p-5 rounded">
         <div class="col border shadow shadow-sm p-3 mx-2">
             <h2>Mes infos</h2>
-            <p class="fs-4"><?= $utilisateur['u_nom'] ?></p>
+            <p class="fs-3"><?= $utilisateur['u_nom'] ?></p>
             <img class="mb-4 portrait-img" src="assets/img/portrait.jfif" alt="Portrait de l'utilisateur">
             <p><b>Mail : </b><?= $utilisateur['u_mail'] ?></p>
             <p><b>Numéro de contact : </b><?= $utilisateur['u_tel'] ?></p>

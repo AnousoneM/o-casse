@@ -59,7 +59,7 @@ function calculateSousTotal($qty, $price)
         </tbody>
     </table>
 
-    <a class="btn btn-secondary text-center col-4 d-block mx-auto m-2" href="index.php">Retour</a>
+    <a class="btn btn-secondary text-center col-4 d-block mx-auto m-2" href="profil.php">Retour</a>
 </div>
 
 <?php include 'templates/footer.php' ?>

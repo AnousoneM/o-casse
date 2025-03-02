@@ -1,5 +1,3 @@
-<?php include 'templates/header.php' ?>
-
 <?php
 
 // on récupère le json via file_get_contents
@@ -17,11 +15,16 @@ $pills = [
     'Intérieur' => 'success',
     'Eclairage' => 'info',
     'Pneumatique' => 'dark',
-]
+];
 
 ?>
 
-<div class="px-4 pt-5 pb-3 my-5 text-center bg-white">
+<?php include 'templates/header.php' ?>
+
+
+
+<!-- block logo + societe -->
+<div class="px-4 py-5 mt-5 text-center bg-white splash">
     <img src="assets/img/ocasse-logo.svg" alt="logo o-casse">
     <h1 class="display-4 fw-bold logo-text">O-casse</h1>
     <div class="col-lg-6 mx-auto">
@@ -29,7 +32,9 @@ $pills = [
     </div>
 </div>
 
-<div class="px-4 pb-1 my-5 text-center">
+<div class="inter-div-1"></div>
+
+<div class="px-4 pb-1 mt-2 mb-2 text-center">
     <div class="display-4 mt-3">
         <i class="bi bi-car-front-fill mx-2"></i><i class="bi bi-tools mx-2"></i>
     </div>
@@ -46,7 +51,7 @@ $pills = [
                 <div class="p-4 bg-light shadow border-light">
                     <span class="badge p-2 text-bg-<?= $pills[$value["cat_nom"]] ?>"><?= $value["cat_nom"] ?></span>
 
-                    <div class="border border-subtle-secondary my-3 p-2 text-center">
+                    <div class="my-3 p-2 text-center">
                         <img src="assets/img/produits/<?= $value["prod_img"] ?>" class="img-produit" alt="image de <?= $value["prod_nom"] ?>">
                     </div>
 
@@ -59,5 +64,7 @@ $pills = [
     <?php } ?>
 
 </div>
+
+<div class="inter-div-2"></div>
 
 <?php include 'templates/footer.php' ?>

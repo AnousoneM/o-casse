@@ -1,9 +1,13 @@
 <?php
+
 // on recupère toutes les catégories au format json puis on les transforme en array via json_decode
 $catJson = file_get_contents('src/Controller/toutes_categories.json');
 $categories = json_decode($catJson, true)[2]['data'];
-?>
 
+// on stock l'url dans une variable uri;
+$uri = $_SERVER['REQUEST_URI'];
+
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -20,7 +24,7 @@ $categories = json_decode($catJson, true)[2]['data'];
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="background d-flex flex-column vh-100">
+<body class="background d-flex flex-column <?= $uri != '/o-casse/index.php' ? 'vh-100' : '' ?>">
     <header class="mb-1">
         <nav class="navbar navbar-expand-lg bg-light shadow fw-bold fixed-top">
             <div class="container-fluid">

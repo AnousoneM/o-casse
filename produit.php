@@ -1,5 +1,3 @@
-<?php include 'templates/header.php' ?>
-
 <?php
 
 /**
@@ -14,7 +12,6 @@ function createStars($moyenne): void
         echo '<i class="bi bi-star text-dark mx-1"></i>';
     }
 }
-
 
 // on récupère le json via file_get_contents pour le détail d'un produit
 $prodJson = file_get_contents('src/Controller/details_produit.json');
@@ -34,6 +31,8 @@ $avisJson = file_get_contents('src/Controller/avis_un_produits.json');
 $avis = json_decode($avisJson, true)[2]['data'];
 
 ?>
+
+<?php include 'templates/header.php' ?>
 
 <div class="container bg-light rounded pt-5 pb-3 my-5">
     <div class="row p-5 rounded">
