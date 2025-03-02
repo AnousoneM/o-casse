@@ -7,6 +7,20 @@ $categories = json_decode($catJson, true)[2]['data'];
 // on stock l'url dans une variable uri;
 $uri = $_SERVER['REQUEST_URI'];
 
+// fonction pour rechercher un élément dans l'URI qui retourne un boolean true ou false
+function testUri($uri)
+{
+    switch ($uri) {
+        case "/index.php":
+        case "/":
+        case "/o-casse/index.php":
+            return true;
+            break;
+        default:
+            return false;
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +38,7 @@ $uri = $_SERVER['REQUEST_URI'];
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="background d-flex flex-column <?= $uri != '/o-casse/index.php' ? 'vh-100' : '' ?>">
+<body class="background d-flex flex-column <?= testUri($uri)? '' : 'vh-100' ?>">
     <header class="mb-1">
         <nav class="navbar navbar-expand-lg bg-light shadow fw-bold fixed-top">
             <div class="container-fluid">
@@ -59,7 +73,7 @@ $uri = $_SERVER['REQUEST_URI'];
                         <input class="form-control me-2" type="search" placeholder="Phare, pare-choc ..." aria-label="Search">
                         <button class="btn btn-dark" type="submit" disabled>Rechercher</button>
                     </form>
-                    <a class="mx-3 btn btn-outline-dark" href="profil.php"><i class="bi bi-person-fill me-2"></i>Mat</a>
+                    <a class="mx-lg-3 mx-auto d-lg-inline d-block text-center col-lg-1 col-10 btn btn-outline-dark mt-lg-0 mt-3" href="profil.php"><i class="bi bi-person-fill me-2"></i>Mat</a>
                 </div>
             </div>
         </nav>

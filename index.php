@@ -21,8 +21,6 @@ $pills = [
 
 <?php include 'templates/header.php' ?>
 
-
-
 <!-- block logo + societe -->
 <div class="px-4 py-5 mt-5 text-center bg-white splash">
     <img src="assets/img/ocasse-logo.svg" alt="logo o-casse">
@@ -32,7 +30,7 @@ $pills = [
     </div>
 </div>
 
-<div class="inter-div-1"></div>
+<div class="inter-div-1 d-lg-block d-none"></div>
 
 <div class="px-4 pb-1 mt-2 mb-2 text-center">
     <div class="display-4 mt-3">
@@ -41,7 +39,7 @@ $pills = [
     <h1 class="display-6 fw-bold text-body-emphasis">Donnez une seconde vie à votre voiture !</h1>
 </div>
 
-<div class="row row-cols-lg-4 g-4 mx-5 mb-5">
+<div class="row row-cols-lg-4 row-cols-1 g-4 mx-5 mb-5">
 
     <!-- Boucle permettant d'afficher tous les produits -->
     <?php foreach ($produits as $value) { ?>
@@ -65,6 +63,6 @@ $pills = [
 
 </div>
 
-<div class="inter-div-2"></div>
+<div class="inter-div-2 d-lg-block d-none"></div>
 
 <?php include 'templates/footer.php' ?>

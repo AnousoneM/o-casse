@@ -35,9 +35,9 @@ $avis = json_decode($avisJson, true)[2]['data'];
 <?php include 'templates/header.php' ?>
 
 <div class="container bg-light rounded pt-5 pb-3 my-5">
-    <div class="row p-5 rounded">
-        <div class="col"><img src="assets/img/produits/siege_cuir.jpg" alt=""></div>
-        <div class="col p-3">
+    <div class="row p-5 justify-content-center">
+        <div class="col-lg-6"><img src="assets/img/produits/<?= $detailsProd["prod_img"] ?>" class="img-fluid" alt="<?= $detailsProd["prod_nom"] ?>"></div>
+        <div class="col-lg-6 p-3">
             <p class="mb-1">Réf : <?= $detailsProd["prod_ref"] ?></p>
             <p>Stock : <b><?= $detailsProd["prod_qte"] ?></b></p>
             <span class="badge p-2 mb-2 text-bg-success"><?= $detailsProd["cat_nom"] ?></span>
